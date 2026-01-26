@@ -1,8 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main   # the branch your site is deployed on
+  name: github
+  repo: KLIIRTY/portfolio-website   # your GitHub repo
+  branch: main                       # branch to commit to
+  auth_scope: repo                   # required for private repos, optional for public
 
-media_folder: "assets/images"   # folder for uploaded images
+media_folder: "assets/images"       # folder for uploaded images
 public_folder: "/assets/images"
 
 collections:
