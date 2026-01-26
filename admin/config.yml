@@ -1,0 +1,7 @@
+backend:
+  name: github
+  repo: KLIIRTY/portfolio-website
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
