@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main   # the branch your site is deployed on
+
+media_folder: "assets/images"   # folder for uploaded images
+public_folder: "/assets/images"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tech", name: "tech", widget: "string" }
+      - { label: "GitHub Link", name: "github", widget: "string" }
+      - { label: "Demo Link", name: "demo", widget: "string" }
