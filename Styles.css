@@ -43,7 +43,15 @@ body {
 
 .footer {
   text-align: center;
+  color: #fef8f8;
   padding: 20px;
-  background: #f4f4f4;
+  background: #0f172a;
   margin-top: 40px;
+}
+.footer p {
+  margin: 0;
+}
+.footer p a {
+  color: #2563eb;
+  font-weight: bold;
 }
