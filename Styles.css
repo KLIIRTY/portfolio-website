@@ -192,3 +192,10 @@ a:hover {
 .btn.secondary:hover {
   background: rgba(147, 197, 253, 0.1);
 }
+section i {
+  margin-right: 8px;
+  color: #2563eb; /* optional, matches buttons/links */
+}
+html {
+  scroll-behavior: smooth;
+}
