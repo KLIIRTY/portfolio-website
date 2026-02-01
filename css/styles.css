@@ -1,0 +1,270 @@
+/* ===============================
+   RESET & BASE
+=============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+/* ===============================
+   LINKS
+=============================== */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* ===============================
+   NAVIGATION
+=============================== */
+.nav {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #2563eb;
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   HEADER / HERO
+=============================== */
+.header {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.header p {
+  font-size: 1.05rem;
+  color: #cbd5f5;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* CTA BUTTONS */
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #1e40af;
+}
+
+.btn.secondary {
+  border: 1px solid #93c5fd;
+  color: #93c5fd;
+}
+
+.btn.secondary:hover {
+  background: rgba(147, 197, 253, 0.1);
+}
+
+/* Fade-in animation for hero */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ===============================
+   SECTIONS
+=============================== */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* ===============================
+   PROJECTS
+=============================== */
+.project {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+  color: #020617;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
+
+.project a {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.project a:hover {
+  color: #2563eb;
+}
+
+/* ===============================
+   SKILLS
+=============================== */
+.skills-list {
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+.skills-list li {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   CONTACT
+=============================== */
+#contact p {
+  margin-bottom: 10px;
+}
+
+#contact i {
+  margin-right: 8px;
+  color: #2563eb;
+}
+
+#contact a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  background: #0c1420;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 32px 24px;
+  margin-top: 60px;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===============================
+   SMOOTH SCROLL
+=============================== */
+html {
+  scroll-behavior: smooth;
+}
