@@ -348,3 +348,8 @@ html {
     padding-top: 80px; /* adjust if needed */
   }
 }
+@media (max-width: 768px) {
+  .section {
+    padding-top: 80px; /* prevents sticky nav from covering sections */
+  }
+}
