@@ -98,15 +98,38 @@ a:hover {
   color: #cbd5f5;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards;
-}
 
-/* CTA BUTTONS */
+/* ===============================
+   CTA BUTTONS RESPONSIVE
+=============================== */
 .cta-buttons {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allows buttons to stack on small screens */
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  min-width: 140px; /* ensures buttons are touch-friendly */
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%; /* buttons take full width on very small screens */
+    font-size: 0.95rem;
+  }
 }
 
 .btn {
@@ -319,3 +342,9 @@ html {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Add top padding to sections on mobile to avoid sticky nav overlap */
+@media (max-width: 768px) {
+  .section {
+    padding-top: 80px; /* adjust if needed */
+  }
+}
