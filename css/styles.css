@@ -14,9 +14,6 @@ body {
   background-color: #f9fafb;
 }
 
-/* ===============================
-   LINKS
-=============================== */
 a {
   color: #2563eb;
   text-decoration: none;
@@ -24,8 +21,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /* ===============================
@@ -33,7 +30,7 @@ a:hover {
 =============================== */
 .nav {
   background: #0f172a;
-  color: #ffffff;
+  color: #fff;
   padding: 16px 24px;
   display: flex;
   justify-content: space-between;
@@ -41,24 +38,25 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .logo {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 .nav-links a {
-  color: #e5e7eb;
   font-weight: 500;
   position: relative;
+  padding: 6px 0;
 }
 
 .nav-links a::after {
@@ -67,12 +65,27 @@ a:hover {
   height: 2px;
   width: 0%;
   background: #2563eb;
-  transition: width 0.3s;
-  margin-top: 4px;
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* ===============================
@@ -80,120 +93,103 @@ a:hover {
 =============================== */
 .header {
   background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
-  padding: 80px 20px;
+  color: #fff;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .header h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #cbd5f5;
 }
 
 .header p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #cbd5f5;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
 
 /* ===============================
-   CTA BUTTONS RESPONSIVE
+   CTA BUTTONS
 =============================== */
 .cta-buttons {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 16px;
-  flex-wrap: wrap; /* allows buttons to stack on small screens */
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 14px 28px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  transition: all 0.2s ease;
-  min-width: 140px; /* ensures buttons are touch-friendly */
-}
-
-@media (max-width: 480px) {
-  .cta-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn {
-    width: 100%; /* buttons take full width on very small screens */
-    font-size: 0.95rem;
-  }
-}
-
-.btn {
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  cursor: pointer;
 }
 
 .btn.primary {
-  background: #2563eb;
-  color: white;
+  background-color: #2563eb;
+  color: #fff;
 }
 
 .btn.primary:hover {
-  background: #1e40af;
+  background-color: #1e40af;
 }
 
 .btn.secondary {
-  border: 1px solid #93c5fd;
+  border: 2px solid #93c5fd;
   color: #93c5fd;
 }
 
 .btn.secondary:hover {
-  background: rgba(147, 197, 253, 0.1);
-}
-
-/* Fade-in animation for hero */
-@keyframes fadeIn {
-  to { opacity: 1; }
+  background: rgba(147, 197, 253, 0.15);
 }
 
 /* ===============================
    SECTIONS
 =============================== */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 .section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #0f172a;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 6px;
 }
 
 /* ===============================
    PROJECTS
 =============================== */
 .project {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   padding: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   border: 1px solid #e5e7eb;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
 .project:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .project h3 {
@@ -205,13 +201,15 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.project a {
-  font-weight: 600;
-  transition: color 0.2s ease;
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.project a:hover {
-  color: #2563eb;
+.project-links .btn {
+  font-size: 0.9rem;
+  padding: 8px 20px;
 }
 
 /* ===============================
@@ -219,30 +217,26 @@ a:hover {
 =============================== */
 .skills-list {
   list-style: none;
-}
-
-@media (min-width: 600px) {
-  .skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .skills-list li {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  padding: 14px 16px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: 500;
 }
 
 /* ===============================
    CONTACT
 =============================== */
 #contact p {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  font-size: 1rem;
 }
 
 #contact i {
@@ -264,6 +258,7 @@ a:hover {
   text-align: center;
   padding: 32px 24px;
   margin-top: 60px;
+  font-size: 0.95rem;
 }
 
 /* ===============================
@@ -273,44 +268,6 @@ a:hover {
   .nav {
     flex-direction: column;
     gap: 12px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .header h1 {
-    font-size: 1.8rem;
-  }
-}
-
-/* ===============================
-   SMOOTH SCROLL
-=============================== */
-html {
-  scroll-behavior: smooth;
-}
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background-color: #e5e7eb;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
   }
 
   .nav-links {
@@ -328,8 +285,33 @@ html {
   .nav-links.active {
     display: flex;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header h2 {
+    font-size: 1.3rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
 }
-/* Animate hamburger to X */
+
+/* ===============================
+   HAMBURGER ANIMATION
+=============================== */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -342,14 +324,13 @@ html {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Add top padding to sections on mobile to avoid sticky nav overlap */
-@media (max-width: 768px) {
-  .section {
-    padding-top: 80px; /* adjust if needed */
-  }
+/* ===============================
+   SMOOTH SCROLL OFFSET
+=============================== */
+html {
+  scroll-behavior: smooth;
 }
-@media (max-width: 768px) {
-  .section {
-    padding-top: 80px; /* prevents sticky nav from covering sections */
-  }
+
+.section {
+  scroll-margin-top: 80px; /* prevents sticky nav from covering content */
 }
