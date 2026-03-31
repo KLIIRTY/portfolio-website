@@ -3,44 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Networking & Systems Portfolio - Infrastructure, Routing, and AI-Powered Network Analysis." />
+
+  <meta name="description" content="Networking & Systems Engineering Portfolio - VLANs, Routing, Infrastructure Design, and AI-driven Network Analysis." />
+
   <title>Networking & Systems | Kelvin Njiru</title>
-  
+
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
 
+  <!-- ================= NAV ================= -->
   <nav class="nav">
     <div class="logo">Networking Lab</div>
+
     <ul class="nav-links">
-      <li><a href="index.html">Main Portfolio</a></li>
-      <li><a href="#analysis">Network AI</a></li>
+      <li><a href="index.html">Full-Stack Portfolio</a></li>
+      <li><a href="#analysis">AI Systems</a></li>
+      <li><a href="#architecture">Architecture Thinking</a></li>
       <li><a href="#labs">Labs</a></li>
       <li><a href="#troubleshooting">Troubleshooting</a></li>
     </ul>
   </nav>
 
+  <!-- ================= HERO ================= -->
   <header class="header">
     <h1>Networking & Systems Engineering</h1>
-    <p>Infrastructure, routing, switching, and AI-driven network telemetry.</p>
+
+    <p>
+      Designing, simulating, and analyzing scalable network infrastructures — from VLAN segmentation
+      and routing protocols to AI-powered traffic analysis and system diagnostics.
+    </p>
+
+    <div class="header-tags">
+      <span>VLAN Design</span>
+      <span>Routing & Switching</span>
+      <span>Subnetting</span>
+      <span>Network Security</span>
+      <span>Telemetry & AI</span>
+    </div>
   </header>
 
+  <!-- ================= AI ANALYSIS ================= -->
   <section id="analysis" class="section">
     <h2>AI-Powered Network Analysis</h2>
-    
+
     <article class="project">
-      <h3>Pacos NetInsight</h3>
+      <h3>NetInsight – AI Network Telemetry System</h3>
+
       <p>
-        An AI-powered network anomaly detection dashboard. It monitors network traffic logs, 
-        identifies suspicious activity using the <strong>IsolationForest</strong> machine learning model, 
-        and visualizes traffic patterns in real-time to prevent potential breaches or bottlenecks.
+        A machine learning-powered network monitoring system that detects anomalies in traffic patterns
+        using Isolation Forest algorithms and visualizes potential threats or bottlenecks in real time.
       </p>
-      <p><strong>Focus:</strong> Network Telemetry, Security Analytics, Machine Learning.</p>
+
+      <p><strong>Focus:</strong> Network Security • Machine Learning • Traffic Analysis</p>
+
       <div class="project-links">
         <a href="https://github.com/KLIIRTY/PacosNetInsight" target="_blank" class="btn secondary">
-          <i class="fab fa-github"></i> GitHub
+          <i class="fab fa-github"></i> Source Code
         </a>
+
         <a href="https://pacosnetinsight.streamlit.app/" target="_blank" class="btn primary">
           <i class="fas fa-external-link-alt"></i> Live Demo
         </a>
@@ -48,34 +71,94 @@
     </article>
   </section>
 
+  <!-- ================= ARCHITECTURE ================= -->
+  <section id="architecture" class="section">
+    <h2>Network Architecture Thinking</h2>
+
+    <article class="project">
+      <h3>How I Design Network Systems</h3>
+
+      <p>
+        My approach to network design focuses on scalability, segmentation, and fault isolation.
+        I prioritize logical communication flow before physical topology implementation.
+      </p>
+
+      <ul>
+        <li>Identify network communication domains</li>
+        <li>Segment using VLANs and subnetting</li>
+        <li>Define routing boundaries and protocols</li>
+        <li>Simulate failure scenarios for resilience testing</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ================= LABS ================= -->
   <section id="labs" class="section">
     <h2>Core Networking Labs</h2>
 
+    <!-- VLAN LAB -->
     <article class="project">
-      <h3>VLAN Configuration Lab</h3>
-      <p>Designed and implemented Layer 2 segmentation using VLANs with inter-switch trunking and communication.</p>
-      <p><strong>Tools:</strong> Cisco Packet Tracer / GNS3</p>
+      <h3>Enterprise VLAN Segmentation Lab</h3>
+
+      <p><strong>Objective:</strong> Designed Layer 2 segmentation using VLANs and inter-switch trunking.</p>
+
+      <p><strong>Implementation:</strong></p>
+      <ul>
+        <li>Configured VLANs across multiple switches</li>
+        <li>Enabled 802.1Q trunk links</li>
+        <li>Implemented router-on-a-stick inter-VLAN routing</li>
+      </ul>
+
+      <p><strong>Outcome:</strong> Successfully isolated departmental networks while enabling controlled communication.</p>
+
+      <div class="project-links">
+        <a href="#" class="btn secondary">Download Packet Tracer (.pkt)</a>
+        <a href="#" class="btn secondary">View Report (PDF)</a>
+      </div>
     </article>
 
+    <!-- SUBNETTING LAB -->
     <article class="project">
-      <h3>Subnetting & Routing</h3>
-      <p>Planned and implemented efficient IPv4 subnetting schemes. Configured static and dynamic routing to ensure connectivity between disparate virtual networks.</p>
-      <p><strong>Key Skills:</strong> VLSM, RIP/OSPF, Gateway Configuration.</p>
+      <h3>Subnetting & Dynamic Routing Lab</h3>
+
+      <p><strong>Objective:</strong> Design efficient IPv4 subnetting schemes and enable inter-network communication.</p>
+
+      <p><strong>Implementation:</strong></p>
+      <ul>
+        <li>Applied VLSM for efficient IP allocation</li>
+        <li>Configured static routing between networks</li>
+        <li>Simulated dynamic routing using RIP/OSPF</li>
+      </ul>
+
+      <p><strong>Outcome:</strong> Achieved full connectivity between segmented networks with optimized IP usage.</p>
+
+      <div class="project-links">
+        <a href="#" class="btn secondary">Download Packet Tracer (.pkt)</a>
+        <a href="#" class="btn secondary">View Report (PDF)</a>
+      </div>
     </article>
   </section>
 
+  <!-- ================= TROUBLESHOOTING ================= -->
   <section id="troubleshooting" class="section">
-    <h2>Troubleshooting & Systems</h2>
+    <h2>Troubleshooting & Systems Debugging</h2>
 
     <article class="project">
-      <h3>MAC Address Conflict Resolution</h3>
-      <p>Diagnosed and resolved a virtual machine communication failure caused by duplicated MAC addresses within a host environment.</p>
-      <p><strong>Outcome:</strong> Restored network stability and documented preventative measures for VM cloning.</p>
+      <h3>VM Network Failure: MAC Address Conflict</h3>
+
+      <p><strong>Problem:</strong> Two cloned virtual machines shared identical MAC addresses causing communication failure.</p>
+
+      <p><strong>Diagnosis:</strong> Detected ARP conflicts and inconsistent ICMP responses during network testing.</p>
+
+      <p><strong>Solution:</strong> Randomized MAC addresses for cloned VMs and reinitialized network interfaces.</p>
+
+      <p><strong>Outcome:</strong> Restored full bidirectional connectivity and documented prevention steps for future VM cloning issues.</p>
     </article>
   </section>
 
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <p>© 2026 Kelvin Njiru. All rights reserved.</p>
+    <p>© 2026 Kelvin Njiru — Networking & Systems Engineering Portfolio</p>
   </footer>
 
 </body>

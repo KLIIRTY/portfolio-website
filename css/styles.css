@@ -1,74 +1,265 @@
-/* RESET & BASE */
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:"Inter", Arial, sans-serif; line-height:1.7; color:#1f2937; background-color:#f9fafb; }
-a { color:#2563eb; text-decoration:none; transition:0.2s ease; }
-a:hover { color:#1d4ed8; text-decoration:underline; }
-
-/* NAVIGATION */
-.nav { background:#0f172a; color:#fff; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-.logo { font-size:1.5rem; font-weight:700; letter-spacing:1px; }
-.nav-links { list-style:none; display:flex; gap:24px; }
-.nav-links a { font-weight:500; position:relative; padding:6px 0; }
-.nav-links a::after { content:""; display:block; height:2px; width:0; background:#2563eb; transition:0.3s ease; }
-.nav-links a:hover::after { width:100%; }
-.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
-.hamburger span { height:3px; width:25px; background-color:#e5e7eb; border-radius:2px; transition:all 0.3s ease; }
-
-/* HERO */
-.header { background:linear-gradient(135deg,#0f172a,#020617); color:#fff; padding:100px 20px; text-align:center; }
-.header h1 { font-size:2.8rem; letter-spacing:1px; margin-bottom:10px; }
-.header h2 { font-size:1.6rem; margin-bottom:12px; color:#cbd5f5; }
-.header p { font-size:1.1rem; color:#cbd5f5; max-width:600px; margin:0 auto 30px; }
-
-/* CTA BUTTONS */
-.cta-buttons { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-.btn { padding:14px 28px; border-radius:999px; font-weight:600; font-size:1rem; text-align:center; transition:0.3s ease; min-width:140px; cursor:pointer; }
-.btn.primary { background-color:#2563eb; color:#fff; }
-.btn.primary:hover { background-color:#1e40af; }
-.btn.secondary { border:2px solid #93c5fd; color:#93c5fd; }
-.btn.secondary:hover { background:rgba(147,197,253,0.15); }
-
-/* SECTIONS */
-.section { padding:80px 20px; max-width:900px; margin:auto; }
-.section h2 { font-size:2rem; margin-bottom:30px; color:#0f172a; border-bottom:2px solid #2563eb; display:inline-block; padding-bottom:6px; }
-
-/* PROJECTS */
-.project { background:#fff; border-radius:12px; padding:24px; margin-bottom:30px; border:1px solid #e5e7eb; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:all 0.3s ease; }
-.project:hover { transform:translateY(-5px); box-shadow:0 12px 24px rgba(0,0,0,0.15); }
-.project h3 { margin-bottom:10px; color:#020617; }
-.project p { margin-bottom:10px; }
-.project-links { display:flex; gap:12px; flex-wrap:wrap; }
-.project-links .btn { font-size:0.9rem; padding:8px 20px; }
-
-/* SKILLS */
-.skills-list { list-style:none; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
-.skills-list li { background:#fff; border:1px solid #e5e7eb; padding:14px 16px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.05); font-weight:500; }
-
-/* CONTACT */
-#contact p { margin-bottom:14px; font-size:1rem; }
-#contact i { margin-right:8px; color:#2563eb; }
-#contact a:hover { color:#1d4ed8; text-decoration:underline; }
-
-/* FOOTER */
-.footer { background:#0c1420; color:#e5e7eb; text-align:center; padding:32px 24px; margin-top:60px; font-size:0.95rem; }
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .nav{ flex-direction:column; gap:12px; }
-  .nav-links{ display:none; flex-direction:column; width:100%; gap:12px; margin-top:10px; text-align:center; background:#0f172a; padding:10px 0; border-radius:8px; }
-  .nav-links.active{ display:flex; }
-  .hamburger{ display:flex; }
-  .header h1{ font-size:2rem; }
-  .header h2{ font-size:1.3rem; }
-  .cta-buttons{ flex-direction:column; gap:12px; }
-  .btn{ width:100%; font-size:0.95rem; }
+/* =========================
+   GLOBAL SYSTEM RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-/* HAMBURGER ANIMATION */
-.hamburger.open span:nth-child(1){ transform:rotate(45deg) translate(5px,5px); }
-.hamburger.open span:nth-child(2){ opacity:0; }
-.hamburger.open span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px); }
+body {
+  background: #0b0f19;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
 
-/* SMOOTH SCROLL */
-html{ scroll-behavior:smooth; }
-.section{ scroll-margin-top:80px; }
+/* =========================
+   NAVBAR (AWS STYLE)
+========================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: rgba(12, 16, 28, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #4da3ff;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a9b1c7;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4da3ff;
+}
+
+/* =========================
+   HERO / LANDING SECTION
+========================= */
+.header {
+  text-align: center;
+  padding: 90px 20px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header h1 {
+  font-size: 42px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #a9b1c7;
+  font-size: 16px;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* AWS-style highlight tags */
+.header-tags {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header-tags span {
+  background: rgba(77, 163, 255, 0.08);
+  border: 1px solid rgba(77, 163, 255, 0.25);
+  color: #4da3ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* =========================
+   SECTION SYSTEM
+========================= */
+.section {
+  padding: 60px 8%;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  border-left: 4px solid #4da3ff;
+  padding-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CARDS (PROJECTS / LABS)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(77, 163, 255, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #a9b1c7;
+  font-size: 14px;
+}
+
+.card ul {
+  margin-left: 18px;
+  color: #b5bdd1;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+.btn-group {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Primary AWS button */
+.btn.primary {
+  background: #4da3ff;
+  color: #0b0f19;
+}
+
+.btn.primary:hover {
+  background: #2f8fff;
+}
+
+/* Outline button */
+.btn.secondary {
+  border: 1px solid #4da3ff;
+  color: #4da3ff;
+}
+
+.btn.secondary:hover {
+  background: rgba(77, 163, 255, 0.12);
+}
+
+/* =========================
+   SKILLS (CLEAN AWS GRID)
+========================= */
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  background: rgba(77, 163, 255, 0.06);
+  border: 1px solid rgba(77, 163, 255, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.skills-list li:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 163, 255, 0.6);
+  box-shadow: 0 10px 25px rgba(77, 163, 255, 0.12);
+}
+
+/* subtle AWS glow */
+.skills-list li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(77, 163, 255, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.skills-list li:hover::after {
+  opacity: 1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  color: #6b7280;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 40px 5%;
+  }
+}
