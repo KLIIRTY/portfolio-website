@@ -3,163 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta name="description" content="Networking & Systems Engineering Portfolio - VLANs, Routing, Infrastructure Design, and AI-driven Network Analysis." />
-
-  <title>Networking & Systems | Kelvin Njiru</title>
-
+  <title>NOC | Kelvin Njiru</title>
+  
   <link rel="stylesheet" href="css/styles.css" />
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/main.js" defer></script>
 </head>
+<body class="pacos-os">
 
-<body>
-
-  <!-- ================= NAV ================= -->
-  <nav class="nav">
-    <div class="logo">Networking Lab</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Full-Stack Portfolio</a></li>
-      <li><a href="#analysis">AI Systems</a></li>
-      <li><a href="#architecture">Architecture Thinking</a></li>
-      <li><a href="#labs">Labs</a></li>
-      <li><a href="#troubleshooting">Troubleshooting</a></li>
-    </ul>
-  </nav>
-
-  <!-- ================= HERO ================= -->
-  <header class="header">
-    <h1>Networking & Systems Engineering</h1>
-
-    <p>
-      Designing, simulating, and analyzing scalable network infrastructures — from VLAN segmentation
-      and routing protocols to AI-powered traffic analysis and system diagnostics.
-    </p>
-
-    <div class="header-tags">
-      <span>VLAN Design</span>
-      <span>Routing & Switching</span>
-      <span>Subnetting</span>
-      <span>Network Security</span>
-      <span>Telemetry & AI</span>
+  <div class="top-bar">
+    <div class="brand">PACOS<span>NET</span> // CORE_V1</div>
+    <div class="metrics">
+      <span id="system-status">LOAD_STABLE</span>
+      <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
     </div>
-  </header>
+  </div>
 
-  <!-- ================= AI ANALYSIS ================= -->
-  <section id="analysis" class="section">
-    <h2>AI-Powered Network Analysis</h2>
-
-    <article class="project">
-      <h3>NetInsight – AI Network Telemetry System</h3>
-
-      <p>
-        A machine learning-powered network monitoring system that detects anomalies in traffic patterns
-        using Isolation Forest algorithms and visualizes potential threats or bottlenecks in real time.
-      </p>
-
-      <p><strong>Focus:</strong> Network Security • Machine Learning • Traffic Analysis</p>
-
-      <div class="project-links">
-        <a href="https://github.com/KLIIRTY/PacosNetInsight" target="_blank" class="btn secondary">
-          <i class="fab fa-github"></i> Source Code
-        </a>
-
-        <a href="https://pacosnetinsight.streamlit.app/" target="_blank" class="btn primary">
-          <i class="fas fa-external-link-alt"></i> Live Demo
-        </a>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">KN</div>
+        <div class="user-info">
+          <span class="name">Kelvin Njiru</span>
+          <span class="role">NOC Engineer</span>
+        </div>
       </div>
-    </article>
-  </section>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-arrow-left"></i> Home</a>
+        <a href="#specialization" class="nav-item active"><i class="fas fa-microchip"></i> Specialization</a>
+        <a href="#labs" class="nav-item"><i class="fas fa-server"></i> Labs</a>
+        <a href="#troubleshooting" class="nav-item"><i class="fas fa-bug"></i> Debug Logs</a>
+      </nav>
+      <div class="sidebar-footer"><p>Powered by Pacos</p></div>
+    </aside>
 
-  <!-- ================= ARCHITECTURE ================= -->
-  <section id="architecture" class="section">
-    <h2>Network Architecture Thinking</h2>
+    <main class="console">
+      <div class="console-content">
+        <header class="console-header">
+          <span class="path">~/root/networks/specialization</span>
+          <h1>Network Operations Center</h1>
+        </header>
 
-    <article class="project">
-      <h3>How I Design Network Systems</h3>
+        <section id="specialization" class="noc-section">
+          <div class="section-tag">CORE_SPECIALIZATION</div>
+          <div class="methodology-container">
+            <div class="method-header">
+              <h3>5G & Network Function Virtualization (NFV)</h3>
+              <p>Architecting the transition to <strong>Software-Defined Networking (SDN)</strong> for scalable infrastructure.</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="exp-item"><span class="code-accent">[01]</span> Network Slicing & 5G Core</div>
+                <div class="exp-item"><span class="code-accent">[02]</span> Infrastructure as Code (IaC)</div>
+                <div class="exp-item"><span class="code-accent">[03]</span> SDN Control Plane Logic</div>
+            </div>
+          </div>
+        </section>
 
-      <p>
-        My approach to network design focuses on scalability, segmentation, and fault isolation.
-        I prioritize logical communication flow before physical topology implementation.
-      </p>
+        <section id="labs" class="noc-section">
+          <div class="section-tag">LAB_INVENTORY</div>
+          <div class="module-grid">
+            <article class="module-card">
+              <div class="module-id">L-ID: 701 // VLAN</div>
+              <h3>Enterprise Segmentation</h3>
+              <p>Layer 2 isolation across multi-switch environments using 802.1Q trunking to secure departmental traffic.</p>
+              <div class="actions">
+                <a href="#">DL_PKT</a>
+                <a href="#">REPORT_PDF</a>
+              </div>
+            </article>
 
-      <ul>
-        <li>Identify network communication domains</li>
-        <li>Segment using VLANs and subnetting</li>
-        <li>Define routing boundaries and protocols</li>
-        <li>Simulate failure scenarios for resilience testing</li>
-      </ul>
-    </article>
-  </section>
+            <article class="module-card">
+              <div class="module-id">L-ID: 702 // OSPF</div>
+              <h3>Routing Convergence</h3>
+              <p>OSPF Area 0 convergence and VLSM optimization for scalable enterprise IPv4 addressing.</p>
+              <div class="actions">
+                <a href="#">DL_PKT</a>
+              </div>
+            </article>
+          </div>
+        </section>
 
-  <!-- ================= LABS ================= -->
-  <section id="labs" class="section">
-    <h2>Core Networking Labs</h2>
-
-    <!-- VLAN LAB -->
-    <article class="project">
-      <h3>Enterprise VLAN Segmentation Lab</h3>
-
-      <p><strong>Objective:</strong> Designed Layer 2 segmentation using VLANs and inter-switch trunking.</p>
-
-      <p><strong>Implementation:</strong></p>
-      <ul>
-        <li>Configured VLANs across multiple switches</li>
-        <li>Enabled 802.1Q trunk links</li>
-        <li>Implemented router-on-a-stick inter-VLAN routing</li>
-      </ul>
-
-      <p><strong>Outcome:</strong> Successfully isolated departmental networks while enabling controlled communication.</p>
-
-      <div class="project-links">
-        <a href="#" class="btn secondary">Download Packet Tracer (.pkt)</a>
-        <a href="#" class="btn secondary">View Report (PDF)</a>
+        <section id="troubleshooting" class="noc-section">
+          <div class="section-tag">INCIDENT_REPORTS</div>
+          <div class="terminal-log">
+            <div class="log-header">SESSION_DEBUG_LOG</div>
+            <div class="log-entry">
+              <span class="log-time">[02:35:17]</span> <span class="log-crit">ERR</span> MAC_CONFLICT
+              <p><strong>Scenario:</strong> Cloned VMs unable to communicate. <strong>Root Cause:</strong> Duplicate MACs in ARP table. <strong>Fix:</strong> NIC randomization + ARP cache flush.</p>
+            </div>
+          </div>
+        </section>
       </div>
-    </article>
-
-    <!-- SUBNETTING LAB -->
-    <article class="project">
-      <h3>Subnetting & Dynamic Routing Lab</h3>
-
-      <p><strong>Objective:</strong> Design efficient IPv4 subnetting schemes and enable inter-network communication.</p>
-
-      <p><strong>Implementation:</strong></p>
-      <ul>
-        <li>Applied VLSM for efficient IP allocation</li>
-        <li>Configured static routing between networks</li>
-        <li>Simulated dynamic routing using RIP/OSPF</li>
-      </ul>
-
-      <p><strong>Outcome:</strong> Achieved full connectivity between segmented networks with optimized IP usage.</p>
-
-      <div class="project-links">
-        <a href="#" class="btn secondary">Download Packet Tracer (.pkt)</a>
-        <a href="#" class="btn secondary">View Report (PDF)</a>
-      </div>
-    </article>
-  </section>
-
-  <!-- ================= TROUBLESHOOTING ================= -->
-  <section id="troubleshooting" class="section">
-    <h2>Troubleshooting & Systems Debugging</h2>
-
-    <article class="project">
-      <h3>VM Network Failure: MAC Address Conflict</h3>
-
-      <p><strong>Problem:</strong> Two cloned virtual machines shared identical MAC addresses causing communication failure.</p>
-
-      <p><strong>Diagnosis:</strong> Detected ARP conflicts and inconsistent ICMP responses during network testing.</p>
-
-      <p><strong>Solution:</strong> Randomized MAC addresses for cloned VMs and reinitialized network interfaces.</p>
-
-      <p><strong>Outcome:</strong> Restored full bidirectional connectivity and documented prevention steps for future VM cloning issues.</p>
-    </article>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <p>© 2026 Kelvin Njiru — Networking & Systems Engineering Portfolio</p>
-  </footer>
-
+    </main>
+  </div>
 </body>
 </html>
