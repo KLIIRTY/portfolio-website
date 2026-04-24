@@ -497,3 +497,122 @@ h1 {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(0.9); }
 }
+/* --- MOBILE SYSTEM OPTIMIZATION (BREAKPOINT: 1024px) --- */
+@media (max-width: 1024px) {
+  body.pacos-os {
+    overflow: auto; /* Allow the whole page to scroll on mobile */
+    height: auto;
+  }
+
+  .app-container {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  /* 1. SIDEBAR TRANSFORMATION */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--sidebar-bg);
+  }
+
+  .user-info .role {
+    margin-bottom: 15px;
+  }
+
+  .side-nav {
+    flex-direction: row;
+    overflow-x: auto; /* Allow horizontal swiping of menu items */
+    padding-bottom: 10px;
+    gap: 8px;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .side-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .nav-item {
+    white-space: nowrap;
+    padding: 10px 16px;
+    font-size: 12px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-item.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--pacos-blue);
+  }
+
+  /* 2. CONSOLE AREA ADJUSTMENTS */
+  .console {
+    padding: 24px;
+    overflow: visible;
+  }
+
+  .console-content {
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  /* 3. GRID SYSTEM RE-CALIBRATION */
+  .module-grid, 
+  .capabilities-grid, 
+  .port-grid, 
+  .expertise-grid {
+    grid-template-columns: 1fr !important; /* Stack everything vertically */
+    gap: 16px;
+  }
+
+  /* 4. TOP BAR (TELEMETRY) REFINEMENT */
+  .top-bar {
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .metrics {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #live-clock {
+    text-align: left;
+    min-width: auto;
+  }
+
+  /* 5. CARD COMPACTNESS */
+  .module-card, .cap-card, .port-card {
+    padding: 20px;
+  }
+
+  .contact-terminal {
+    padding: 20px;
+  }
+
+  .sidebar-footer {
+    display: none; /* Hide footer on mobile to save space */
+  }
+}
+
+/* Fix for very small devices */
+@media (max-width: 480px) {
+  .brand {
+    font-size: 14px;
+  }
+  
+  .metrics {
+    font-size: 8px;
+  }
+}
