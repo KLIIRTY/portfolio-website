@@ -1,4 +1,4 @@
-// 1. CLOCK ENGINE (Independent of DOM items except the clock itself)
+// 1. CLOCK ENGINE
 function updateClock() {
     const clockElement = document.getElementById('live-clock');
     if (!clockElement) return;
@@ -23,38 +23,75 @@ function updateClock() {
 
         clockElement.innerText = `${d}/${m}/${y} // ${hh}:${mm}:${ss} EAT`;
     } catch (e) {
-        // Fallback if Intl fails
         clockElement.innerText = now.toLocaleString();
     }
 }
 
 // 2. SYSTEM INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
-    // Start Telemetry
     updateClock();
     setInterval(updateClock, 1000);
 
     const consoleArea = document.querySelector('.console');
     const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('section[id]');
-    const logContainer = document.getElementById('status-log');
 
-    // Smooth Scrolling Logic
+    // --- SMART SCROLL CONTROL (Integrated) ---
     navItems.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href');
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
             if (targetId && targetId.startsWith('#')) {
                 e.preventDefault();
                 const targetElement = document.querySelector(targetId);
-                if (targetElement && consoleArea) {
-                    consoleArea.scrollTo({
-                        top: targetElement.offsetTop - 50,
-                        behavior: 'smooth'
-                    });
+                
+                if (targetElement) {
+                    const isMobile = window.innerWidth <= 1024;
+                    
+                    if (isMobile) {
+                        // Mobile: Scroll the whole page
+                        const offset = 140; // Adjust for your mobile header height
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else if (consoleArea) {
+                        // Desktop: Scroll the console div
+                        consoleArea.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             }
         });
     });
+
+    // --- SCROLL SPY (Tracking for Mobile & Desktop) ---
+    const scrollTarget = (window.innerWidth <= 1024) ? window : consoleArea;
+    
+    if (scrollTarget) {
+        scrollTarget.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const scrollTop = (scrollTarget === window) ? window.pageYOffset : consoleArea.scrollTop;
+                
+                if (scrollTop >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    }
 
     // Keyboard Shortcuts
     document.addEventListener('keydown', (e) => {
