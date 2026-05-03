@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NOC | Kelvin Njiru</title>
-  
   <link rel="stylesheet" href="css/styles.css" />
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="js/main.js" defer></script>
 </head>
@@ -45,6 +43,7 @@
           <h1>Network Operations Center</h1>
         </header>
 
+        <!-- SPECIALIZATION -->
         <section id="specialization" class="noc-section">
           <div class="section-tag">CORE_SPECIALIZATION</div>
           <div class="methodology-container">
@@ -59,29 +58,32 @@
             </div>
           </div>
         </section>
-<div id="dynamic-lab-grid" class="module-grid">
-    <!-- Labs will be injected here from the database -->
-</div>
+
+        <!-- DYNAMIC LAB INVENTORY -->
+        <section id="labs" class="noc-section">
+          <div class="section-tag">LAB_INVENTORY</div>
+          <div id="dynamic-lab-grid" class="module-grid">
+            <!-- JavaScript will inject cards here from your Render SQLite DB -->
           </div>
         </section>
 
+        <!-- INCIDENT REPORTS -->
         <section id="troubleshooting" class="noc-section">
-  <div class="section-tag">INCIDENT_REPORTS</div>
-  
-  <!-- NEW: LIVE TELEMETRY HOOK -->
-  <div class="telemetry-banner" style="background: rgba(0, 255, 0, 0.05); border: 1px solid #00ff00; padding: 10px; margin-bottom: 15px; border-radius: 4px; font-family: monospace;">
-    <span style="color: #00ff00; font-weight: bold;">[LIVE_UPLINK]:</span> 
-    <span id="pacos-status-display" style="color: #fff;">Awaiting cloud handshake...</span>
-  </div>
+          <div class="section-tag">INCIDENT_REPORTS</div>
+          
+          <div class="telemetry-banner" style="background: rgba(0, 255, 0, 0.05); border: 1px solid #00ff00; padding: 10px; margin-bottom: 15px; border-radius: 4px; font-family: monospace;">
+            <span style="color: #00ff00; font-weight: bold;">[LIVE_UPLINK]:</span> 
+            <span id="pacos-status-display" style="color: #fff;">Connecting to cloud management plane...</span>
+          </div>
 
-  <div class="terminal-log">
-    <div class="log-header">SESSION_DEBUG_LOG</div>
-    <div class="log-entry">
-      <span class="log-time">[02:35:17]</span> <span class="log-crit">ERR</span> MAC_CONFLICT
-      <p><strong>Scenario:</strong> Cloned VMs unable to communicate. <strong>Root Cause:</strong> Duplicate MACs in ARP table. <strong>Fix:</strong> NIC randomization + ARP cache flush.</p>
-    </div>
-  </div>
-</section>
+          <div class="terminal-log">
+            <div class="log-header">SESSION_DEBUG_LOG</div>
+            <div class="log-entry">
+              <span class="log-time">[02:35:17]</span> <span class="log-crit">ERR</span> MAC_CONFLICT
+              <p><strong>Scenario:</strong> Cloned VMs unable to communicate. <strong>Root Cause:</strong> Duplicate MACs in ARP table. <strong>Fix:</strong> NIC randomization + ARP cache flush.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </div>
