@@ -11,7 +11,35 @@ function updateClock() {
         hour12: false,
         timeZone: 'Africa/Nairobi'
     };
+async function refreshNOCInventory() {
+    const grid = document.getElementById('dynamic-lab-grid');
+    if (!grid) return;
 
+    try {
+        const response = await fetch('https://pacosnet-api.onrender.com/get-labs');
+        const labs = await response.json();
+        
+        grid.innerHTML = ''; // Wipe existing static cards
+
+        labs.forEach(lab => {
+            grid.innerHTML += `
+                <article class="module-card">
+                  <div class="module-id">L-ID: ${lab.id}</div>
+                  <h3>${lab.title}</h3>
+                  <p>${lab.description}</p>
+                  <div class="actions">
+                    <span class="status-tag" style="color: #00ff00;">[ ${lab.status} ]</span>
+                  </div>
+                </article>
+            `;
+        });
+    } catch (err) {
+        console.error("Uplink failed:", err);
+    }
+}
+
+// Call it on load
+document.addEventListener('DOMContentLoaded', refreshNOCInventory);
     try {
         const formatter = new Intl.DateTimeFormat('en-GB', options);
         const parts = formatter.formatToParts(new Date());

@@ -59,36 +59,9 @@
             </div>
           </div>
         </section>
-
-        <section id="labs" class="noc-section">
-          <div class="section-tag">LAB_INVENTORY</div>
-          <div class="module-grid">
-            <article class="module-card">
-              <div class="module-id">L-ID: 701 // VLAN</div>
-              <h3>Enterprise Segmentation</h3>
-              <p>Layer 2 isolation across multi-switch environments using 802.1Q trunking to secure departmental traffic.</p>
-              <div class="actions">
-                <a href="#">DL_PKT</a>
-                <a href="#">REPORT_PDF</a>
-              </div>
-            </article>
-
-            <article class="module-card">
-              <div class="module-id">L-ID: 702 // OSPF</div>
-              <h3>Routing Convergence</h3>
-              <p>OSPF Area 0 convergence and VLSM optimization for scalable enterprise IPv4 addressing.</p>
-              <div class="actions">
-                <a href="#">DL_PKT</a>
-              </div>
-            </article>
-            <article class="module-card">
-  <div class="module-id">L-ID: 703 // VNF</div>
-  <h3>Ubuntu Virtual Node Orchestration</h3>
-  <p>Automated telemetry extraction using <strong>Python</strong> on ARM-based Ubuntu nodes. Implementing cloud-to-local policy enforcement.</p>
-  <div class="actions">
-    <span id="vnf-node-status" style="color: #00ff00; font-size: 0.8rem;">[ NODE_ACTIVE ]</span>
-  </div>
-</article>
+<div id="dynamic-lab-grid" class="module-grid">
+    <!-- Labs will be injected here from the database -->
+</div>
           </div>
         </section>
 
