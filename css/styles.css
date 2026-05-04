@@ -476,3 +476,19 @@ h1 {
     z-index: 9998;
   }
 }
+@media (max-width: 900px) {
+  .sidebar-footer {
+    text-align: center;
+    padding: 12px 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.7;
+
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  .sidebar-footer p {
+    margin: 0;
+  }
+}
