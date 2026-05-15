@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kelvin Njiru portfolio — Systems Engineer specializing in 5G, NFV, SDN, AI, and infrastructure architecture." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="Kelvin Njiru | Systems Architect" />
+  <meta property="og:description" content="Explore Kelvin Njiru's portfolio of systems architecture, network automation, and AI-enabled infrastructure projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kelvin Njiru | Systems Architect" />
+  <meta name="twitter:description" content="Explore Kelvin Njiru's portfolio of systems architecture, network automation, and AI-enabled infrastructure projects." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
   <title>Kelvin Njiru | Systems Architect</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="js/main.js" defer></script>
@@ -18,8 +30,6 @@
     </div>
   </div>
 
-<body class="pacos-os">
-
    <div class="top-bar">
     <div class="brand">PACOS<span>NET</span> // CORE_V1</div>
     <div class="metrics">
@@ -27,6 +37,7 @@
   <button id="menu-open">☰</button>
   <button id="menu-close">✕</button>
 </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
       <span id="system-status">LOAD_STABLE</span>
       <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
     </div>
@@ -45,6 +56,8 @@
         <a href="#about" class="nav-item active" id="nav-about"><i class="fas fa-terminal"></i> About</a>
         <a href="#projects" class="nav-item" id="nav-projects"><i class="fas fa-layer-group"></i> Projects</a>
         <a href="#skills" class="nav-item" id="nav-skills"><i class="fas fa-microchip"></i> Core Skills</a>
+        <a href="#experience" class="nav-item" id="nav-experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#education" class="nav-item" id="nav-education"><i class="fas fa-graduation-cap"></i> Education</a>
         <a href="networking.html" class="nav-item" style="color: #ffab4d;"><i class="fas fa-network-wired"></i> Networking </a>
       </nav>
 
@@ -55,14 +68,22 @@
 
     <main class="console">
       <div class="console-content">
-        <section id="about">
+        <section id="about" class="hero-section">
           <span class="path">~/root/bio</span>
           <h1>Systems Overview</h1>
           <p class="bio-text">
-            Applied Computer Technology student at USIU-Africa. Specializing in 5G, NFV, and SDN architecture. 
+            Applied Computer Technology student at USIU-Africa. Specializing in 5G, NFV, and SDN architecture.
             Expert in mastering logical system architecture before high-burst execution.
           </p>
-          <a href="assets/KELVIN NJIRU CV.pdf" class="btn-terminal" download>[ DOWNLOAD_CV.EXE ]</a>
+          <div class="hero-actions">
+            <a href="assets/KELVIN NJIRU CV.pdf" class="btn-terminal" download>[ DOWNLOAD_CV.EXE ]</a>
+            <a href="#contact" class="btn-terminal secondary">[ OPEN_COMM_PORT ]</a>
+          </div>
+          <div class="hero-metrics">
+            <div><strong>5+</strong> systems projects</div>
+            <div><strong>3</strong> active domains</div>
+            <div><strong>1</strong> NOC portfolio</div>
+          </div>
         </section>
 
         <section id="projects">
@@ -145,40 +166,110 @@
 
   </div>
 </section>
+
+<section id="experience">
+  <div class="section-label">PROFESSIONAL_EXPERIENCE</div>
+  <div class="experience-grid">
+    <article class="experience-card">
+      <div class="experience-role">Systems Engineer Intern</div>
+      <div class="experience-company">USIU-Africa Computing Lab</div>
+      <div class="experience-date">2024 – Present</div>
+      <p>Designed and documented virtual network topologies for 5G and SDN research projects. Supported network automation with Python scripts and packet analysis tools.</p>
+    </article>
+    <article class="experience-card">
+      <div class="experience-role">Network Automation Project</div>
+      <div class="experience-company">PacosNetInsight</div>
+      <div class="experience-date">2025 – Present</div>
+      <p>Built an anomaly detection pipeline using Isolation Forest for network telemetry. Integrated monitoring dashboards and alerts for security and operational performance.</p>
+    </article>
+    <article class="experience-card">
+      <div class="experience-role">Full-stack Developer</div>
+      <div class="experience-company">SmartStay Marketplace</div>
+      <div class="experience-date">2026 – Present</div>
+      <p>Developed admin moderation and verification workflows for a distributed hospitality marketplace. Implemented user authentication and database CRUD logic.</p>
+    </article>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-label">EDUCATION & CERTIFICATIONS</div>
+  <div class="education-timeline">
+    <article class="timeline-item">
+      <div>
+        <div class="timeline-title">Applied Computer Technology</div>
+        <div class="timeline-subtitle">USIU-Africa</div>
+      </div>
+      <div class="timeline-date">2024 – Present</div>
+    </article>
+    <article class="timeline-item">
+      <div>
+        <div class="timeline-title"> Prep for CCNA Routing & Switching</div>
+        <div class="timeline-subtitle">Cisco Certified</div>
+      </div>
+      <div class="timeline-date">April 2026</div>
+    </article>
+    <article class="timeline-item">
+      <div>
+        <div class="timeline-title">Network Automation Bootcamp</div>
+        <div class="timeline-subtitle">PacosNet Labs</div>
+      </div>
+      <div class="timeline-date">2025-Present</div>
+    </article>
+  </div>
+</section>
+
      <section id="contact">
   <div class="section-label">ACTIVE_COMMUNICATION_CHANNELS</div>
   <div class="contact-terminal">
-    <div class="port-grid">
-      
-      <a href="https://wa.me/254110156986?text=Hello%20Kelvin,%20I%20am%20interested%20in%20your%20Systems%20Architecture%20work..." 
-         target="_blank" 
-         class="port-card">
-        <div class="port-status"><span class="pulse"></span> ONLINE</div>
-        <i class="fab fa-whatsapp"></i>
-        <div class="port-info">
-          <span class="label">WHATSAPP_UPLINK</span>
-          <span class="value">+254 110 156986</span>
-        </div>
-      </a>
+    <div class="contact-layout">
+      <div class="port-grid">
+        <a href="https://wa.me/254110156986?text=Hello%20Kelvin,%20I%20am%20interested%20in%20your%20Systems%20Architecture%20work..." 
+           target="_blank" 
+           class="port-card">
+          <div class="port-status"><span class="pulse"></span> ONLINE</div>
+          <i class="fab fa-whatsapp"></i>
+          <div class="port-info">
+            <span class="label">WHATSAPP_UPLINK</span>
+            <span class="value">+254 110 156986</span>
+          </div>
+        </a>
 
-      <a href="mailto:Nyagakevin822@gmail.com?subject=Portfolio%20Inquiry" class="port-card">
-        <div class="port-status">READY</div>
-        <i class="fas fa-envelope"></i>
-        <div class="port-info">
-          <span class="label">SMTP_RELAY</span>
-          <span class="value">Nyagakevin822@gmail.com</span>
-        </div>
-      </a>
+        <a href="mailto:Nyagakevin822@gmail.com?subject=Portfolio%20Inquiry" class="port-card">
+          <div class="port-status">READY</div>
+          <i class="fas fa-envelope"></i>
+          <div class="port-info">
+            <span class="label">SMTP_RELAY</span>
+            <span class="value">Nyagakevin822@gmail.com</span>
+          </div>
+        </a>
 
-      <a href="https://www.linkedin.com/in/kelvin-njiru-926858214/" target="_blank" class="port-card">
-        <div class="port-status">CONNECTED</div>
-        <i class="fab fa-linkedin"></i>
-        <div class="port-info">
-          <span class="label">PROFESSIONAL_ID</span>
-          <span class="value">in/kelvin-njiru</span>
-        </div>
-      </a>
+        <a href="https://www.linkedin.com/in/kelvin-njiru-926858214/" target="_blank" class="port-card">
+          <div class="port-status">CONNECTED</div>
+          <i class="fab fa-linkedin"></i>
+          <div class="port-info">
+            <span class="label">PROFESSIONAL_ID</span>
+            <span class="value">in/kelvin-njiru</span>
+          </div>
+        </a>
+      </div>
 
+      <form id="contact-form" class="contact-form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="Enter your email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" placeholder="Hi Kelvin, I would like to..." required></textarea>
+        </label>
+        <button type="submit" class="btn-terminal">SEND_MESSAGE</button>
+        <p class="form-note">Or send a quick note via <a href="https://wa.me/254110156986" target="_blank">WhatsApp</a>.</p>
+        <p id="form-status" class="form-status"></p>
+      </form>
     </div>
   </div>
 </section>

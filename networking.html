@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Network Operations Center portfolio page for Kelvin Njiru, showcasing 5G, NFV, SDN, and lab automation." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="NOC | Kelvin Njiru" />
+  <meta property="og:description" content="Explore Kelvin Njiru's network operations center work, including 5G, NFV, SDN, and automation lab tooling." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NOC | Kelvin Njiru" />
+  <meta name="twitter:description" content="Explore Kelvin Njiru's network operations center work, including 5G, NFV, SDN, and automation lab tooling." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
   <title>NOC | Kelvin Njiru</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="js/main.js" defer></script>
@@ -17,10 +29,10 @@
   <button id="menu-open">☰</button>
   <button id="menu-close">✕</button>
 </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
       <span id="system-status">LOAD_STABLE</span>
       <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
     </div>
-  </div>
   </div>
 
   <div class="app-container">
@@ -68,7 +80,11 @@
         <section id="labs" class="noc-section">
           <div class="section-tag">LAB_INVENTORY</div>
           <div id="dynamic-lab-grid" class="module-grid">
-            <!-- JavaScript will inject cards here from your Render SQLite DB -->
+            <article class="module-card">
+              <div class="module-id">L-ID: 000</div>
+              <h3>Connecting to PACOS Cloud</h3>
+              <p>Loading the latest lab inventory and telemetry from your network management engine.</p>
+            </article>
           </div>
         </section>
 

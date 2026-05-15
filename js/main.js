@@ -132,6 +132,88 @@ function runBootSequence() {
     }, 700);
 }
 
+function setTheme(theme) {
+    const body = document.body;
+    const toggle = document.getElementById('theme-toggle');
+
+    if (theme === 'light') {
+        body.classList.add('light-mode');
+    } else {
+        body.classList.remove('light-mode');
+    }
+
+    if (toggle) {
+        toggle.textContent = theme === 'light' ? '🌙' : '🌗';
+    }
+
+    localStorage.setItem('site-theme', theme);
+}
+
+function initThemeToggle() {
+    const savedTheme = localStorage.getItem('site-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+        setTheme(nextTheme);
+    });
+}
+
+function initSectionObserver() {
+    const sections = document.querySelectorAll('main .console-content section[id]');
+    const navLinks = document.querySelectorAll('.side-nav .nav-item');
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    }, {
+        rootMargin: '-35% 0px -55% 0px',
+        threshold: 0.25
+    });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    if (!form) return;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const name = (formData.get('name') || '').toString().trim();
+        const email = (formData.get('email') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+
+        if (!name || !email || !message) {
+            if (status) status.textContent = 'Please complete all fields before sending.';
+            return;
+        }
+
+        const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+        if (status) status.textContent = 'Opening your email client...';
+        window.location.href = `mailto:Nyagakevin822@gmail.com?subject=${subject}&body=${body}`;
+    });
+}
+
 
 /* ==========================================
    5. SYSTEM INITIALIZATION
@@ -146,6 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshNOCInventory();
     fetchNetworkStatus();
     setInterval(fetchNetworkStatus, 30000);
+
+    // UX Enhancements
+    initThemeToggle();
+    initSectionObserver();
+    initContactForm();
 
     // BOOT CONTROL (IMPORTANT FIX)
     const bootAlreadyRun = sessionStorage.getItem("pacos_boot_done");
@@ -178,6 +265,16 @@ if (closeBtn && sidebar) {
         document.body.classList.remove("sidebar-open");
     });
 }
+
+const navLinks = document.querySelectorAll('.side-nav .nav-item');
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+            sidebar.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        }
+    });
+});
 
 // close when clicking outside sidebar (nice UX)
 document.addEventListener("click", (e) => {
