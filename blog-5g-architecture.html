@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Design patterns for scalable 5G core services with SDN and NFV best practices." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="Design patterns for scalable 5G core services | Kelvin Njiru" />
+  <meta property="og:description" content="Explore SDN and NFV design patterns for resilient 5G core deployments in campus and enterprise environments." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Design patterns for scalable 5G core services | Kelvin Njiru" />
+  <meta name="twitter:description" content="Explore SDN and NFV design patterns for resilient 5G core deployments in campus and enterprise environments." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
+  <title>Design patterns for scalable 5G core services | Kelvin Njiru</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body class="pacos-os">
+  <div class="top-bar">
+    <div class="brand">PACOS<span>NET</span> // BLOG_POST</div>
+    <div class="metrics">
+      <div class="mobile-controls">
+        <button id="menu-open">☰</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <span id="system-status">LOAD_STABLE</span>
+      <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">KN</div>
+        <div class="user-info">
+          <span class="name">Kelvin Njiru</span>
+          <span class="role">Systems Engineer</span>
+        </div>
+      </div>
+      <div class="mobile-close">
+        <button id="menu-close">✕</button>
+      </div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="blog.html" class="nav-item"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="networking.html" class="nav-item"><i class="fas fa-network-wired"></i> Networking</a>
+      </nav>
+      <div class="sidebar-footer"><p>Powered by Pacos</p></div>
+    </aside>
+
+    <main class="console">
+      <div class="console-content">
+        <header class="console-header">
+          <span class="path">~/root/content/blog/5g-architecture</span>
+          <h1>Design patterns for scalable 5G core services</h1>
+          <p class="post-meta">May 2026 · 5G Architecture · 7 min read</p>
+        </header>
+
+        <article class="post-article">
+          <p>Building a scalable 5G core means thinking in terms of services, slices, and automation from day one.</p>
+          <h2>Core design principles</h2>
+          <p>In the PACOS architecture, the three most important design principles are modularity, observability, and dynamic policy control.</p>
+          <ul>
+            <li><strong>Modularity:</strong> Keep functions isolated so upgrades don't disrupt the control plane.</li>
+            <li><strong>Observability:</strong> Add telemetry at every VNFM and service gateway.</li>
+            <li><strong>Dynamic policy:</strong> Use SDN controllers to adapt slice behavior in real time.</li>
+          </ul>
+          <h2>Example deployment</h2>
+          <p>The implementation used an NFV-based 5G core with edge CPE nodes and a central orchestration plane. I mapped service chains for voice, video, and IoT flows and validated isolation with synthetic traffic profiles.</p>
+          <h2>Lessons learned</h2>
+          <p>Automation is not optional for 5G. The next iteration will embed a self-healing feedback loop that reroutes resources on congestion alerts.</p>
+          <div class="post-tags"><span>5G</span><span>NFV</span><span>SDN</span><span>Edge</span></div>
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

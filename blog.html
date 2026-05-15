@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kelvin Njiru's engineering blog featuring network automation, 5G, and systems architecture insights." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="Blog | Kelvin Njiru" />
+  <meta property="og:description" content="Read Kelvin Njiru's latest engineering insights on network automation, 5G architecture, and infrastructure design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog | Kelvin Njiru" />
+  <meta name="twitter:description" content="Read Kelvin Njiru's latest engineering insights on network automation, 5G architecture, and infrastructure design." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
+  <title>Blog | Kelvin Njiru</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body class="pacos-os">
+
+  <div class="top-bar">
+    <div class="brand">PACOS<span>NET</span> // CORE_BLOG</div>
+    <div class="metrics">
+      <div class="mobile-controls">
+        <button id="menu-open">☰</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <span id="system-status">LOAD_STABLE</span>
+      <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">KN</div>
+        <div class="user-info">
+          <span class="name">Kelvin Njiru</span>
+          <span class="role">Systems Engineer</span>
+        </div>
+      </div>
+      <div class="mobile-close">
+        <button id="menu-close">✕</button>
+      </div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="#blog" class="nav-item active" id="nav-blog"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="networking.html" class="nav-item"><i class="fas fa-network-wired"></i> Networking</a>
+      </nav>
+      <div class="sidebar-footer"><p>Powered by Pacos</p></div>
+    </aside>
+
+    <main class="console">
+      <div class="console-content">
+        <header class="console-header">
+          <span class="path">~/root/content/blog</span>
+          <h1>Engineering Journal</h1>
+        </header>
+
+        <section id="blog" class="blog-section">
+          <div class="section-label">LATEST_INSIGHTS</div>
+          <p class="blog-intro">A running log of network automation experiments, architectural thinking, and systems scaling notes.</p>
+          <div class="blog-grid">
+            <a href="blog-automation.html" class="blog-card">
+              <div class="blog-meta">
+                <span>June 2026</span>
+                <span>Network Automation</span>
+              </div>
+              <h3>Automating NOC workflows with Python</h3>
+              <p>How I built a lightweight alert pipeline for PACOS network telemetry, reducing manual incident triage by 40% and improving alert accuracy.</p>
+              <div class="tag-cloud"><span>Python</span><span>Automation</span><span>NOC</span></div>
+              <span class="read-more">Read article →</span>
+            </a>
+
+            <a href="blog-5g-architecture.html" class="blog-card">
+              <div class="blog-meta">
+                <span>May 2026</span>
+                <span>5G Architecture</span>
+              </div>
+              <h3>Design patterns for scalable 5G core services</h3>
+              <p>Lessons from modeling SDN and NFV designs for campus and enterprise edge deployments, with a focus on dynamic policy control.</p>
+              <div class="tag-cloud"><span>5G</span><span>SDN</span><span>NFV</span></div>
+              <span class="read-more">Read article →</span>
+            </a>
+
+            <a href="blog-lab-dashboard.html" class="blog-card">
+              <div class="blog-meta">
+                <span>April 2026</span>
+                <span>Full-stack labs</span>
+              </div>
+              <h3>Building an interactive lab inventory dashboard</h3>
+              <p>Capturing live lab state and policy updates from your Render API with a real-time, easy-to-read operations interface.</p>
+              <div class="tag-cloud"><span>Dashboard</span><span>Labs</span><span>API</span></div>
+              <span class="read-more">Read article →</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

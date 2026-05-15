@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Building an interactive lab inventory dashboard for NOC and cloud-managed network labs." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="Building an interactive lab inventory dashboard | Kelvin Njiru" />
+  <meta property="og:description" content="See how Kelvin built a live lab inventory dashboard that connects to PACOS cloud APIs for automated telemetry updates." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Building an interactive lab inventory dashboard | Kelvin Njiru" />
+  <meta name="twitter:description" content="See how Kelvin built a live lab inventory dashboard that connects to PACOS cloud APIs for automated telemetry updates." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
+  <title>Building an interactive lab inventory dashboard | Kelvin Njiru</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body class="pacos-os">
+  <div class="top-bar">
+    <div class="brand">PACOS<span>NET</span> // BLOG_POST</div>
+    <div class="metrics">
+      <div class="mobile-controls">
+        <button id="menu-open">☰</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <span id="system-status">LOAD_STABLE</span>
+      <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">KN</div>
+        <div class="user-info">
+          <span class="name">Kelvin Njiru</span>
+          <span class="role">Systems Engineer</span>
+        </div>
+      </div>
+      <div class="mobile-close">
+        <button id="menu-close">✕</button>
+      </div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="blog.html" class="nav-item"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="networking.html" class="nav-item"><i class="fas fa-network-wired"></i> Networking</a>
+      </nav>
+      <div class="sidebar-footer"><p>Powered by Pacos</p></div>
+    </aside>
+
+    <main class="console">
+      <div class="console-content">
+        <header class="console-header">
+          <span class="path">~/root/content/blog/lab-dashboard</span>
+          <h1>Building an interactive lab inventory dashboard</h1>
+          <p class="post-meta">April 2026 · Full-stack labs · 6 min read</p>
+        </header>
+
+        <article class="post-article">
+          <p>The lab dashboard was created to give teams a real-time view into lab capacity and device state, without having to open separate command consoles.</p>
+          <h2>Why it mattered</h2>
+          <p>Network and cloud labs can quickly become opaque without a centralized view. I wanted a dashboard that reflected active sessions, policy status, and lab inventory in one screen.</p>
+          <h2>Implementation</h2>
+          <p>I built the dashboard using a lightweight frontend connected to a cloud API. The page renders lab cards dynamically and refreshes state every 30 seconds, making it suitable for live operations and shift handovers.</p>
+          <h2>Results</h2>
+          <p>The result was a more transparent operations experience: lab owners knew when resources were free, and engineers could spot stale sessions before they consumed capacity.</p>
+          <div class="post-tags"><span>Dashboard</span><span>Labs</span><span>API</span><span>Visibility</span></div>
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

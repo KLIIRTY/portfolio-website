@@ -1,102 +1,94 @@
-# Portfolio Website
+# Kelvin Njiru — Portfolio Website
 
-Live portfolio website showcasing my frontend development skills, projects, and learning progress.
+A polished personal portfolio built to showcase frontend design, responsive UX, and technical storytelling. The site highlights real web development skills, project work, and a growing engineering journal.
 
-🌐 Live Site: https://kelvinjiru.netlify.app/  
-📦 Repository: https://github.com/KLIIRTY/portfolio-website
-
----
-
-## Overview
-
-This project is my personal portfolio website. It is built to demonstrate how I translate ideas and requirements into clear, usable, and responsive user interfaces. The site focuses on simplicity, readability, and real-world frontend practices.
-
-The portfolio highlights:
-- Who I am and what I’m learning
-- Projects I’ve worked on
-- The tools and technologies I use
-- How to contact me
+- Live site: https://kelvinjiru.netlify.app/
+- Repository: https://github.com/KLIIRTY/portfolio-website
 
 ---
 
-## Tech Stack
+## Project Summary
 
-- HTML5 – semantic structure
-- CSS3 – layout, responsiveness, and styling
-- JavaScript (ES6+) – interactivity and behavior
-- Git & GitHub – version control
-- Netlify – deployment
+This portfolio is designed to communicate a clear, professional web presence through structured content, intuitive navigation, and responsive styling. It emphasizes:
 
----
-
-## Features
-
-- Responsive layout (mobile, tablet, desktop)
-- Clean and simple UI focused on clarity
-- Structured sections (About, Projects, Skills, Contact)
-- Deployed and publicly accessible
+- practical frontend workflow and layout design
+- readable content with a consistent visual system
+- a real blog section for technical notes and project insights
+- mobile-first functionality with smooth navigation
 
 ---
 
-## Project Structure
+## Technology Stack
 
+- HTML5: semantic page structure and accessible content
+- CSS3: responsive styling, layout grids, and theme support
+- JavaScript (ES6+): interactive navigation, theme toggle, and UI behaviors
+- Git & GitHub: source control and version tracking
+- Netlify: static deployment and continuous hosting
+
+---
+
+## Key Features
+
+- Fully responsive experience across mobile, tablet, and desktop
+- Distinct portfolio sections for About, Projects, Skills, Blog, and Contact
+- Custom sidebar and mobile navigation controls
+- Theme toggle for light / dark presentation
+- Blog landing page with article previews and dedicated post pages
+- Contact form support and polished interface details
+
+---
+
+## Repository Structure
+
+```
 portfolio-website/
-│── index.html
-│── css/
+├── index.html
+├── networking.html
+├── blog.html
+├── blog-automation.html
+├── blog-5g-architecture.html
+├── blog-lab-dashboard.html
+├── css/
 │   └── styles.css
-│── js/
+├── js/
 │   └── main.js
-│── assets/
-│   ├── images/
-│   └── icons/
-│── README.md
+├── assets/
+│   ├── icons/
+│   └── images/
+└── README.md
+```
 
 ---
 
-## What I Learned
+## Development Notes
 
-- Structuring a frontend project for maintainability
-- Writing cleaner, more readable HTML and CSS
-- Making layouts responsive using modern CSS techniques
-- Hosting and maintaining a live website
-- Using Git commits to track progress
+This project demonstrates practical website development and ongoing improvement. The codebase was developed with maintainability and usability in mind.
 
----
+Recent updates include:
 
-## Improvements in Progress
-
-This is an actively improving project. Planned updates include:
-- Better accessibility (ARIA labels, contrast checks)
-- Refactoring CSS for scalability
-- Improving performance and loading speed
-- Adding more documented projects
-- Enhancing UI based on feedback
+- improved blog content structure and article navigation
+- refined mobile nav controls and responsive layout behavior
+- expanded metadata for SEO and social sharing
+- polished card and article page presentations
 
 ---
 
-## How to Run Locally
+## Run Locally
 
-1. Clone the repository  
-   git clone https://github.com/KLIIRTY/portfolio-website.git
-
-2. Open index.html in your browser
-
----
-
-## About Me
-
-I’m a frontend development learner focused on building real, usable interfaces rather than just visual demos. I’m interested in how frontend development supports decision-making, usability, and real business needs.
+1. Clone the repository:
+   ```bash
+git clone https://github.com/KLIIRTY/portfolio-website.git
+```
+2. Open `index.html` in a browser, or serve locally with a static file server.
 
 ---
 
 ## Contact
 
-GitHub: https://github.com/KLIIRTY  
-Portfolio: https://kelvinjiru.netlify.app/
+- GitHub: https://github.com/KLIIRTY
+- Portfolio: https://kelvinjiru.netlify.app/
 
 ---
 
-This portfolio represents learning in progress, not perfection.
-Feedback and suggestions are welcome!
-Feel free to reach out!
-Thank you for visiting my portfolio!
+This portfolio is a live showcase of frontend craftsmanship and growing engineering experience. Feedback and collaboration are welcome.

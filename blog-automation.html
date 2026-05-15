@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automating NOC workflows with Python: a step-by-step implementation for PACOS network telemetry." />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta property="og:title" content="Automating NOC workflows with Python | Kelvin Njiru" />
+  <meta property="og:description" content="Learn how Kelvin built a lightweight alert pipeline for PACOS network telemetry to reduce manual triage and improve response time." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/favicon.svg" />
+  <meta property="og:site_name" content="PacosNet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Automating NOC workflows with Python | Kelvin Njiru" />
+  <meta name="twitter:description" content="Learn how Kelvin built a lightweight alert pipeline for PACOS network telemetry to reduce manual triage and improve response time." />
+  <meta name="twitter:image" content="assets/favicon.svg" />
+  <title>Automating NOC workflows with Python | Kelvin Njiru</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body class="pacos-os">
+  <div class="top-bar">
+    <div class="brand">PACOS<span>NET</span> // BLOG_POST</div>
+    <div class="metrics">
+      <div class="mobile-controls">
+        <button id="menu-open">☰</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <span id="system-status">LOAD_STABLE</span>
+      <span id="live-clock">00/00/2026 // 00:00:00 EAT</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">KN</div>
+        <div class="user-info">
+          <span class="name">Kelvin Njiru</span>
+          <span class="role">Systems Engineer</span>
+        </div>
+      </div>
+      <div class="mobile-close">
+        <button id="menu-close">✕</button>
+      </div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="blog.html" class="nav-item"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="networking.html" class="nav-item"><i class="fas fa-network-wired"></i> Networking</a>
+      </nav>
+      <div class="sidebar-footer"><p>Powered by Pacos</p></div>
+    </aside>
+
+    <main class="console">
+      <div class="console-content">
+        <header class="console-header">
+          <span class="path">~/root/content/blog/automation</span>
+          <h1>Automating NOC workflows with Python</h1>
+          <p class="post-meta">June 2026 · Network Automation · 8 min read</p>
+        </header>
+
+        <article class="post-article">
+          <p>Bringing automation into the Network Operations Center (NOC) was the first step in turning reactive incident handling into proactive operations.</p>
+          <h2>Problem</h2>
+          <p>The PACOS environment was generating high-volume telemetry from edge devices, but manual alert triage slowed down response and introduced delays for high-priority incidents.</p>
+          <h2>Approach</h2>
+          <p>Using Python, I built a lightweight pipeline that ingested telemetry events, filtered anomalies, and dispatched formatted alerts to the team. The solution used:</p>
+          <ul>
+            <li>Python scripts for event parsing and rule matching</li>
+            <li>Pandas for quick telemetry normalization</li>
+            <li>SMTP and webhook notifications for fast escalation</li>
+          </ul>
+          <h2>Implementation Highlights</h2>
+          <p>The pipeline processes data in batches, enriches records with system metadata, and applies score thresholds to avoid alert fatigue. I also added a sandboxed test harness to validate rules before deployment.</p>
+          <h2>Outcome</h2>
+          <p>After deployment, incident triage time dropped by 40%, and the NOC team could focus on the highest-risk events first. The same workflow is now ready for extension to live policy automation.</p>
+          <div class="post-tags"><span>Python</span><span>NOC</span><span>Automation</span><span>Telemetry</span></div>
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
