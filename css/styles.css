@@ -706,6 +706,15 @@ h1 {
   transform: translateY(-5px);
 }
 
+.module-card.clickable {
+  cursor: pointer;
+}
+
+.module-card.clickable:focus {
+  outline: 3px solid rgba(255,159,28,0.12);
+  outline-offset: 2px;
+}
+
 /* tags */
 .tag-cloud span {
   border: 1px solid var(--border);

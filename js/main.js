@@ -214,6 +214,40 @@ function initContactForm() {
     });
 }
 
+/* ==========================================
+   4.b PROJECT CARD LINKS — make cards clickable
+========================================== */
+function initProjectLinks() {
+    const cards = document.querySelectorAll('.module-card');
+    if (!cards || !cards.length) return;
+
+    cards.forEach(card => {
+        const actionAnchors = Array.from(card.querySelectorAll('.actions a'));
+        if (!actionAnchors.length) return;
+
+        // Prefer anchors that look like a live/demo link
+        const launchLink = actionAnchors.find(a => /LAUNCH|LIVE|VIEW/i.test(a.textContent) || /^https?:\/\//i.test(a.href));
+        if (!launchLink) return;
+
+        card.classList.add('clickable');
+        card.setAttribute('role', 'link');
+        card.setAttribute('tabindex', '0');
+
+        card.addEventListener('click', (e) => {
+            // don't hijack clicks on inner links or interactive controls
+            if (e.target.closest('a') || e.target.tagName.toLowerCase() === 'button') return;
+            window.open(launchLink.href, '_blank', 'noopener,noreferrer');
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(launchLink.href, '_blank', 'noopener,noreferrer');
+            }
+        });
+    });
+}
+
 
 /* ==========================================
    5. SYSTEM INITIALIZATION
@@ -233,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initSectionObserver();
     initContactForm();
+    initProjectLinks();
 
     // BOOT CONTROL (IMPORTANT FIX)
     const bootAlreadyRun = sessionStorage.getItem("pacos_boot_done");
